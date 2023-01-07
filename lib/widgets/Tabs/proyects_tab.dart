@@ -64,7 +64,7 @@ class _ProyectsTabState extends State<ProyectsTab> with AdaptiveTextSize {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              _lateralScrollIconButton('assets/icons/flutter.png', 0),
+              _lateralScrollIconButton('assets/AppLocalizations.of(context)..png', 0),
               _lateralScrollIconButton('assets/icons/unity.png', 1),
               _lateralScrollIconButton('assets/icons/solidity.png', 2),
             ],
@@ -171,7 +171,7 @@ class _ProyectsTabState extends State<ProyectsTab> with AdaptiveTextSize {
   }
 
   Widget _flutterContent() {
-    return _section(_keys[0], '/icons/flutter.png',
+    return _section(_keys[0], '/assets/AppLocalizations.of(context)..png',
         AppLocalizations.of(context).flutterName, [
       Entry(
         title: AppLocalizations.of(context).flutterContent3Title,
@@ -180,15 +180,15 @@ class _ProyectsTabState extends State<ProyectsTab> with AdaptiveTextSize {
         tecnologies: '',
         images: [
           CustomImages(
-              '/photos/flutter/web_curriculum/preview_1.png',
+              '/assets/photos/flutter/web_curriculum/preview_1.png',
               AppLocalizations.of(context).flutterContent3Image1Title,
               AppLocalizations.of(context).flutterContent3Image1Description),
           CustomImages(
-              '/photos/flutter/web_curriculum/preview_2.png',
+              '/assets/photos/flutter/web_curriculum/preview_2.png',
               AppLocalizations.of(context).flutterContent3Image2Title,
               AppLocalizations.of(context).flutterContent3Image2Description),
           CustomImages(
-              '/photos/flutter/web_curriculum/preview_3.png',
+              '/assets/photos/flutter/web_curriculum/preview_3.png',
               AppLocalizations.of(context).flutterContent3Image3Title,
               AppLocalizations.of(context).flutterContent3Image3Description),
         ],
@@ -224,40 +224,40 @@ class _ProyectsTabState extends State<ProyectsTab> with AdaptiveTextSize {
         tecnologies: AppLocalizations.of(context).flutterContent2Tecnologies,
         images: [
           CustomImages(
-            '/photos/flutter/aiju_platform/login.png',
+            '/assets/photos/flutter/aiju_platform/login.png',
             AppLocalizations.of(context).flutterContent2Image1Title,
             AppLocalizations.of(context).flutterContent2Image1Description,
           ),
           CustomImages(
-              '/photos/flutter/aiju_platform/init.png',
+              '/assets/photos/flutter/aiju_platform/init.png',
               AppLocalizations.of(context).flutterContent2Image2Title,
               AppLocalizations.of(context).flutterContent2Image2Description),
           CustomImages(
-              '/photos/flutter/aiju_platform/init_2.png',
+              '/assets/photos/flutter/aiju_platform/init_2.png',
               AppLocalizations.of(context).flutterContent2Image3Title,
               AppLocalizations.of(context).flutterContent2Image3Description),
           CustomImages(
-              '/photos/flutter/aiju_platform/chat_bot_detail.png',
+              '/assets/photos/flutter/aiju_platform/chat_bot_detail.png',
               AppLocalizations.of(context).flutterContent2Image4Title,
               AppLocalizations.of(context).flutterContent2Image4Description),
           CustomImages(
-              '/photos/flutter/aiju_platform/image_recognition.png',
+              '/assets/photos/flutter/aiju_platform/image_recognition.png',
               AppLocalizations.of(context).flutterContent2Image5Title,
               AppLocalizations.of(context).flutterContent2Image5Description),
           CustomImages(
-              '/photos/flutter/aiju_platform/feeling_recognition.png',
+              '/assets/photos/flutter/aiju_platform/feeling_recognition.png',
               AppLocalizations.of(context).flutterContent2Image6Title,
               AppLocalizations.of(context).flutterContent2Image6Description),
           CustomImages(
-              '/photos/flutter/aiju_platform/google_ai_recognition_2021.png',
+              '/assets/photos/flutter/aiju_platform/google_ai_recognition_2021.png',
               AppLocalizations.of(context).flutterContent2Image7Title,
               AppLocalizations.of(context).flutterContent2Image7Description),
           CustomImages(
-              '/photos/flutter/aiju_platform/demo_info.png',
+              '/assets/photos/flutter/aiju_platform/demo_info.png',
               AppLocalizations.of(context).flutterContent2Image8Title,
               AppLocalizations.of(context).flutterContent2Image8Description),
           CustomImages(
-              '/photos/flutter/aiju_platform/proyect_structure.png',
+              '/assets/photos/flutter/aiju_platform/proyect_structure.png',
               AppLocalizations.of(context).flutterContent2Image9Title,
               AppLocalizations.of(context).flutterContent2Image9Description),
         ],
@@ -283,15 +283,15 @@ class _ProyectsTabState extends State<ProyectsTab> with AdaptiveTextSize {
         tecnologies: AppLocalizations.of(context).flutterContent1Tecnologies,
         images: [
           CustomImages(
-              '/photos/flutter/listnology/shopping_list.png',
+              '/assets/photos/flutter/listnology/shopping_list.png',
               AppLocalizations.of(context).flutterContent1Image1Title,
               AppLocalizations.of(context).flutterContent1Image1Description),
           CustomImages(
-              '/photos/flutter/listnology/categories.png',
+              '/assets/photos/flutter/listnology/categories.png',
               AppLocalizations.of(context).flutterContent1Image2Title,
               AppLocalizations.of(context).flutterContent1Image2Description),
           CustomImages(
-              '/photos/flutter/listnology/create_share.png',
+              '/assets/photos/flutter/listnology/create_share.png',
               AppLocalizations.of(context).flutterContent1Image3Title,
               AppLocalizations.of(context).flutterContent1Image3Description),
         ],
@@ -302,7 +302,7 @@ class _ProyectsTabState extends State<ProyectsTab> with AdaptiveTextSize {
 
   Widget _unityContent() {
     return _section(
-        _keys[1], '/icons/unity.png', AppLocalizations.of(context).unityName, [
+        _keys[1], '/assets/icons/unity.png', AppLocalizations.of(context).unityName, [
       Entry(
           title: AppLocalizations.of(context).unityContent7Title,
           description: AppLocalizations.of(context).unityContent7Subtitle,
@@ -318,15 +318,15 @@ class _ProyectsTabState extends State<ProyectsTab> with AdaptiveTextSize {
           tecnologies: AppLocalizations.of(context).unityContent7Tecnologies,
           images: [
             CustomImages(
-                '/photos/unity/intelect/preview_1.png',
+                '/assets/photos/unity/intelect/preview_1.png',
                 AppLocalizations.of(context).unityContent7Image1Title,
                 AppLocalizations.of(context).unityContent7Image1Description),
             CustomImages(
-                '/photos/unity/intelect/preview_2.png',
+                '/assets/photos/unity/intelect/preview_2.png',
                 AppLocalizations.of(context).unityContent7Image2Title,
                 AppLocalizations.of(context).unityContent7Image2Description),
             CustomImages(
-                '/photos/unity/intelect/preview_3.png',
+                '/assets/photos/unity/intelect/preview_3.png',
                 AppLocalizations.of(context).unityContent7Image3Title,
                 AppLocalizations.of(context).unityContent7Image3Description),
           ],
@@ -346,15 +346,15 @@ class _ProyectsTabState extends State<ProyectsTab> with AdaptiveTextSize {
           tecnologies: AppLocalizations.of(context).unityContent6Tecnologies,
           images: [
             CustomImages(
-                '/photos/unity/dulk/preview_1.png',
+                '/assets/photos/unity/dulk/preview_1.png',
                 AppLocalizations.of(context).unityContent6Image1Title,
                 AppLocalizations.of(context).unityContent6Image1Description),
             CustomImages(
-                '/photos/unity/dulk/preview_2.png',
+                '/assets/photos/unity/dulk/preview_2.png',
                 AppLocalizations.of(context).unityContent6Image2Title,
                 AppLocalizations.of(context).unityContent6Image2Description),
             CustomImages(
-                '/photos/unity/dulk/preview_3.png',
+                '/assets/photos/unity/dulk/preview_3.png',
                 AppLocalizations.of(context).unityContent6Image3Title,
                 AppLocalizations.of(context).unityContent6Image3Description),
           ],
@@ -366,15 +366,15 @@ class _ProyectsTabState extends State<ProyectsTab> with AdaptiveTextSize {
         tecnologies: AppLocalizations.of(context).unityContent5Tecnologies,
         images: [
           CustomImages(
-              '/photos/unity/app_emotions/preview_3.png',
+              '/assets/photos/unity/app_emotions/preview_3.png',
               AppLocalizations.of(context).unityContent5Image1Title,
               AppLocalizations.of(context).unityContent5Image1Description),
           CustomImages(
-              '/photos/unity/app_emotions/preview_1.png',
+              '/assets/photos/unity/app_emotions/preview_1.png',
               AppLocalizations.of(context).unityContent5Image2Title,
               AppLocalizations.of(context).unityContent5Image2Description),
           CustomImages(
-              '/photos/unity/app_emotions/preview_2.png',
+              '/assets/photos/unity/app_emotions/preview_2.png',
               AppLocalizations.of(context).unityContent5Image3Title,
               AppLocalizations.of(context).unityContent5Image3Description),
         ],
@@ -398,15 +398,15 @@ class _ProyectsTabState extends State<ProyectsTab> with AdaptiveTextSize {
           tecnologies: AppLocalizations.of(context).unityContent4Tecnologies,
           images: [
             CustomImages(
-                '/photos/unity/clips_ar/preview_2.png',
+                '/assets/photos/unity/clips_ar/preview_2.png',
                 AppLocalizations.of(context).unityContent4Image1Title,
                 AppLocalizations.of(context).unityContent4Image1Description),
             CustomImages(
-                '/photos/unity/clips_ar/preview_3.png',
+                '/assets/photos/unity/clips_ar/preview_3.png',
                 AppLocalizations.of(context).unityContent4Image2Title,
                 AppLocalizations.of(context).unityContent4Image2Description),
             CustomImages(
-                '/photos/unity/clips_ar/preview_1.png',
+                '/assets/photos/unity/clips_ar/preview_1.png',
                 AppLocalizations.of(context).unityContent4Image3Title,
                 AppLocalizations.of(context).unityContent4Image3Description),
           ],
@@ -430,39 +430,39 @@ class _ProyectsTabState extends State<ProyectsTab> with AdaptiveTextSize {
           tecnologies: AppLocalizations.of(context).unityContent3Tecnologies,
           images: [
             CustomImages(
-                '/photos/unity/unity_games_aiju/tambor.png',
+                '/assets/photos/unity/unity_games_aiju/tambor.png',
                 AppLocalizations.of(context).unityContent3Image1Title,
                 AppLocalizations.of(context).unityContent3Image1Description),
             CustomImages(
-                '/photos/unity/unity_games_aiju/puzzles_2D.png',
+                '/assets/photos/unity/unity_games_aiju/puzzles_2D.png',
                 AppLocalizations.of(context).unityContent3Image2Title,
                 AppLocalizations.of(context).unityContent3Image2Description),
             CustomImages(
-                '/photos/unity/unity_games_aiju/baby_susu.png',
+                '/assets/photos/unity/unity_games_aiju/baby_susu.png',
                 AppLocalizations.of(context).unityContent3Image3Title,
                 AppLocalizations.of(context).unityContent3Image3Description),
             CustomImages(
-                '/photos/unity/unity_games_aiju/bike.png',
+                '/assets/photos/unity/unity_games_aiju/bike.png',
                 AppLocalizations.of(context).unityContent3Image4Title,
                 AppLocalizations.of(context).unityContent3Image4Description),
             CustomImages(
-                '/photos/unity/unity_games_aiju/emotions.png',
+                '/assets/photos/unity/unity_games_aiju/emotions.png',
                 AppLocalizations.of(context).unityContent3Image5Title,
                 AppLocalizations.of(context).unityContent3Image5Description),
             CustomImages(
-                '/photos/unity/unity_games_aiju/paola_reina.png',
+                '/assets/photos/unity/unity_games_aiju/paola_reina.png',
                 AppLocalizations.of(context).unityContent3Image6Title,
                 AppLocalizations.of(context).unityContent3Image6Description),
             CustomImages(
-                '/photos/unity/unity_games_aiju/puzzles_3D.png',
+                '/assets/photos/unity/unity_games_aiju/puzzles_3D.png',
                 AppLocalizations.of(context).unityContent3Image7Title,
                 AppLocalizations.of(context).unityContent3Image7Description),
             CustomImages(
-                '/photos/unity/unity_games_aiju/puzzles_3D_2.png',
+                '/assets/photos/unity/unity_games_aiju/puzzles_3D_2.png',
                 AppLocalizations.of(context).unityContent3Image8Title,
                 AppLocalizations.of(context).unityContent3Image8Description),
             CustomImages(
-                '/photos/unity/unity_games_aiju/tambor_v2.png',
+                '/assets/photos/unity/unity_games_aiju/tambor_v2.png',
                 AppLocalizations.of(context).unityContent3Image9Title,
                 AppLocalizations.of(context).unityContent3Image9Description),
           ],
@@ -485,15 +485,15 @@ class _ProyectsTabState extends State<ProyectsTab> with AdaptiveTextSize {
           tecnologies: AppLocalizations.of(context).unityContent2Tecnologies,
           images: [
             CustomImages(
-                '/photos/unity/samt_sudoe/preview_1.png',
+                '/assets/photos/unity/samt_sudoe/preview_1.png',
                 AppLocalizations.of(context).unityContent2Image1Title,
                 AppLocalizations.of(context).unityContent2Image1Description),
             CustomImages(
-                '/photos/unity/samt_sudoe/preview_2.png',
+                '/assets/photos/unity/samt_sudoe/preview_2.png',
                 AppLocalizations.of(context).unityContent2Image2Title,
                 AppLocalizations.of(context).unityContent2Image2Description),
             CustomImages(
-                '/photos/unity/samt_sudoe/preview_3.png',
+                '/assets/photos/unity/samt_sudoe/preview_3.png',
                 AppLocalizations.of(context).unityContent2Image3Title,
                 AppLocalizations.of(context).unityContent2Image3Description),
           ],
@@ -511,15 +511,15 @@ class _ProyectsTabState extends State<ProyectsTab> with AdaptiveTextSize {
           tecnologies: AppLocalizations.of(context).unityContent1Tecnologies,
           images: [
             CustomImages(
-                '/photos/unity/tranquill_app/preview_1.png',
+                '/assets/photos/unity/tranquill_app/preview_1.png',
                 AppLocalizations.of(context).unityContent1Image1Title,
                 AppLocalizations.of(context).unityContent1Image1Description),
             CustomImages(
-                '/photos/unity/tranquill_app/preview_2.png',
+                '/assets/photos/unity/tranquill_app/preview_2.png',
                 AppLocalizations.of(context).unityContent1Image2Title,
                 AppLocalizations.of(context).unityContent1Image2Description),
             CustomImages(
-                '/photos/unity/tranquill_app/preview_3.png',
+                '/assets/photos/unity/tranquill_app/preview_3.png',
                 AppLocalizations.of(context).unityContent1Image3Title,
                 AppLocalizations.of(context).unityContent1Image3Description),
           ],
@@ -530,7 +530,7 @@ class _ProyectsTabState extends State<ProyectsTab> with AdaptiveTextSize {
   Widget _solidityContent() {
     return _section(
       _keys[2],
-      '/icons/solidity.png',
+      '/assets/icons/solidity.png',
       AppLocalizations.of(context).solidityName,
       [
         Entry(
@@ -540,15 +540,15 @@ class _ProyectsTabState extends State<ProyectsTab> with AdaptiveTextSize {
           tecnologies: AppLocalizations.of(context).solidityContent1Tecnologies,
           images: [
             CustomImages(
-                '/photos/solidity/fuguland/fugus.png',
+                '/assets/photos/solidity/fuguland/fugus.png',
                 AppLocalizations.of(context).solidityContent1Image1Title,
                 AppLocalizations.of(context).solidityContent1Image1Description),
             CustomImages(
-                '/photos/solidity/fuguland/whitepaper_pvp.png',
+                '/assets/photos/solidity/fuguland/whitepaper_pvp.png',
                 AppLocalizations.of(context).solidityContent1Image2Title,
                 AppLocalizations.of(context).solidityContent1Image2Description),
             CustomImages(
-                '/photos/solidity/fuguland/contract.png',
+                '/assets/photos/solidity/fuguland/contract.png',
                  AppLocalizations.of(context).solidityContent1Image3Title,
                 AppLocalizations.of(context).solidityContent1Image3Description),
           ],
