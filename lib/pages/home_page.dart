@@ -33,7 +33,7 @@ class _HomePageState extends State<HomePage>
           tab: CustomTab(
               title: AppLocalizations.of(context).home.toUpperCase(),
               position: 0),
-          content: const ProyectsTab()),
+          content: const HomeTab()),
       ContentView(
           tab: CustomTab(
               title: AppLocalizations.of(context).aboutMe.toUpperCase(),
