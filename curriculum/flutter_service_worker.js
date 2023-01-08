@@ -3,7 +3,7 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "f02f295252754e9619b632c84c7ca9a0",
+  "assets/AssetManifest.json": "713564daae558c7cb739be1190abc47e",
 "assets/assets/dotenv": "cb2440a290a922a11079f2c1973b128b",
 "assets/assets/fonts/Boogaloo-Regular.ttf": "674e6a030ef6967f601a4c50fbe07868",
 "assets/assets/fonts/Chilanka-Regular.ttf": "ba32e9863761cf72f378cc16b5123854",
@@ -74,6 +74,8 @@ const RESOURCES = {
 "assets/assets/photos/unity/unity_games_aiju/tambor_v2.png": "7696952394281c1840dbeb4f6ca19af4",
 "assets/curriculum/assets/assets/dotenv": "cb2440a290a922a11079f2c1973b128b",
 "assets/curriculum/assets/curriculum/assets/assets/dotenv": "cb2440a290a922a11079f2c1973b128b",
+"assets/curriculum/assets/curriculum/assets/curriculum/assets/assets/dotenv": "cb2440a290a922a11079f2c1973b128b",
+"assets/curriculum/assets/curriculum/assets/dotenv": "cb2440a290a922a11079f2c1973b128b",
 "assets/curriculum/assets/dotenv": "cb2440a290a922a11079f2c1973b128b",
 "assets/dotenv": "cb2440a290a922a11079f2c1973b128b",
 "assets/FontManifest.json": "a2eb12b53fb4f2725e3fdd32ce3a1c92",
@@ -89,9 +91,9 @@ const RESOURCES = {
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
-"index.html": "5488378055ef1adf1c75e37ff6f44482",
-"/": "5488378055ef1adf1c75e37ff6f44482",
-"main.dart.js": "08120bf9fa41dd7e79a24fcc90b32100",
+"index.html": "fca4ff1e3aadfe5fe7e2809dacf89e24",
+"/": "fca4ff1e3aadfe5fe7e2809dacf89e24",
+"main.dart.js": "292e5589cb12883198ab16a01b707ca1",
 "manifest.json": "ec08f8a41d3702051bc1b9403407148a",
 "version.json": "9640df76fad238e2ee9ec97b2687fe91"
 };
