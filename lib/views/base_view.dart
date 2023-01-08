@@ -34,7 +34,7 @@ abstract class BaseView extends StatelessWidget {
   }
 
   Widget email(context) {
-    double? textSize = 17;
+    double? textSize = 18;
     return TextButton(
         style: ButtonStyle(
             overlayColor:
@@ -47,19 +47,19 @@ abstract class BaseView extends StatelessWidget {
               text: AppLocalizations.of(context).email,
               style: TextStyle(
                   color: Colors.white,
-                  fontFamily: 'Questrial',
+                  fontFamily: 'Dangrek',
                   fontSize: textSize),
               children: <TextSpan>[
                 TextSpan(
                     text: '.',
                     style: TextStyle(
                         color: Theme.of(context).primaryColor,
-                        fontFamily: 'Questrial',
+                        fontFamily: 'Dangrek',
                         fontSize: textSize)),
                 TextSpan(
                     text: 'com',
                     style:
-                        TextStyle(fontFamily: 'Questrial', fontSize: textSize)),
+                        TextStyle(fontFamily: 'Dangrek', fontSize: textSize)),
               ],
             ),
           ),

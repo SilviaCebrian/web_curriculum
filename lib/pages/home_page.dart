@@ -19,12 +19,12 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage>
-    with SingleTickerProviderStateMixin {
+    with TickerProviderStateMixin {
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
   late TabController tabController;
   late double screenHeight, screenWidth, topPadding, bottomPadding;
   late List<ContentView> contentViews;
-
+  late int currentView = -1;
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
@@ -33,7 +33,7 @@ class _HomePageState extends State<HomePage>
           tab: CustomTab(
               title: AppLocalizations.of(context).home.toUpperCase(),
               position: 0),
-          content: const HomeTab()),
+          content: const ProyectsTab()),
       ContentView(
           tab: CustomTab(
               title: AppLocalizations.of(context).aboutMe.toUpperCase(),
@@ -52,6 +52,13 @@ class _HomePageState extends State<HomePage>
     ];
 
     tabController = TabController(length: contentViews.length, vsync: this);
+    tabController.addListener(() {
+      if (tabController.animation!.isCompleted) {
+        currentView = tabController.index;
+        // Your code goes here.
+        // To get index of current tab use tabController.index
+      }
+    });
   }
 
   @override
@@ -62,6 +69,7 @@ class _HomePageState extends State<HomePage>
 
   @override
   Widget build(BuildContext context) {
+    if (currentView >= 0) tabController.animateTo(currentView);
     screenHeight = MediaQuery.of(context).size.height;
     screenWidth = MediaQuery.of(context).size.width;
     topPadding = screenHeight * 0.01;

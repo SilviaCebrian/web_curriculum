@@ -26,35 +26,49 @@ class CustomFullScreenWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        Navigator.push(
-            context,
-            PageRouteBuilder(
-                opaque: false,
-                barrierColor: backgroundIsTransparent
-                    ? Colors.white.withOpacity(0)
-                    : backgroundColor,
-                pageBuilder: (BuildContext context, _, __) {
-                  return FullScreenPageCustom(
-                    child: Image.asset(path,
-                        fit: MediaQuery.of(context).size.width >= 1500
-                            ? BoxFit.contain
-                            : BoxFit.fitWidth),
-                    backgroundColor: backgroundColor,
-                    backgroundIsTransparent: backgroundIsTransparent,
-                    disposeLevel: disposeLevel,
-                  );
-                }));
-      },
-      child: SizedBox(
-        width: size.width,
-        height: size.height,
-        child: Image.asset(
-          path,
-          fit: BoxFit.cover,
-        ),
-      ),
-    );
+        onTap: () {
+          Navigator.push(
+              context,
+              PageRouteBuilder(
+                  opaque: false,
+                  barrierColor: backgroundIsTransparent
+                      ? Colors.white.withOpacity(0)
+                      : backgroundColor,
+                  pageBuilder: (BuildContext context, _, __) {
+                    return FullScreenPageCustom(
+                      child: Image.asset(path,
+                          fit: MediaQuery.of(context).size.width >= 1500
+                              ? BoxFit.contain
+                              : BoxFit.fitWidth),
+                      backgroundColor: backgroundColor,
+                      backgroundIsTransparent: backgroundIsTransparent,
+                      disposeLevel: disposeLevel,
+                    );
+                  }));
+        },
+        child: MediaQuery.of(context).size.width > 1500
+            ? Image.asset(
+                path,
+                fit: BoxFit.scaleDown,
+                width: size.width,
+                height: size.height,
+              )
+            : Image.asset(
+                path,
+                fit: BoxFit.scaleDown,
+
+                // width: size.width,
+                // height: size.height,
+              )
+        // SizedBox(
+        //   width: size.width,
+        //   height: size.height,
+        //   child: Image.asset(
+        //     path,
+        //     fit: BoxFit.cover,
+        //   ),
+        // ),
+        );
   }
 }
 

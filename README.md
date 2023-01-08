@@ -6,3 +6,4 @@ Proyecto hecho en flutter para utilizarlo de curriculum.
 flutter build web
 
 ## Enlace de la web
+https://silviacebrian.github.io/curriculum/#/

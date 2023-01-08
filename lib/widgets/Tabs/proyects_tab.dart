@@ -155,11 +155,11 @@ class _ProyectsTabState extends State<ProyectsTab> with AdaptiveTextSize {
                   ],
                 )),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              padding: const EdgeInsets.symmetric(horizontal: 0.0),
               child: AnimatedCustomList(
                 fromTop: true,
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 5.0, vertical: 15),
+                    const EdgeInsets.symmetric(horizontal: 0, vertical: 15),
                 initialDelay: 500,
                 direction: Axis.vertical,
                 height: 0,
@@ -301,8 +301,8 @@ class _ProyectsTabState extends State<ProyectsTab> with AdaptiveTextSize {
   }
 
   Widget _unityContent() {
-    return _section(
-        _keys[1], 'assets/icons/unity.png', AppLocalizations.of(context).unityName, [
+    return _section(_keys[1], 'assets/icons/unity.png',
+        AppLocalizations.of(context).unityName, [
       Entry(
           title: AppLocalizations.of(context).unityContent7Title,
           description: AppLocalizations.of(context).unityContent7Subtitle,
@@ -549,7 +549,7 @@ class _ProyectsTabState extends State<ProyectsTab> with AdaptiveTextSize {
                 AppLocalizations.of(context).solidityContent1Image2Description),
             CustomImages(
                 'assets/photos/solidity/fuguland/contract.png',
-                 AppLocalizations.of(context).solidityContent1Image3Title,
+                AppLocalizations.of(context).solidityContent1Image3Title,
                 AppLocalizations.of(context).solidityContent1Image3Description),
           ],
           imageSize: landscape,
@@ -562,14 +562,11 @@ class _ProyectsTabState extends State<ProyectsTab> with AdaptiveTextSize {
 abstract class AdaptiveTextSize {
   double getadaptiveTextSize(BuildContext context, dynamic value) {
     // 720 is medium screen height
-    return (value / 720) *
-        (currentDirection(context) == Axis.vertical
-            ? MediaQuery.of(context).size.height
-            : MediaQuery.of(context).size.width * 0.5);
+    return (value / 720) * MediaQuery.of(context).size.height * 1.1;
   }
 
   Axis currentDirection(BuildContext context) {
-    bool isScreenWide = MediaQuery.of(context).size.width >= 1500;
+    bool isScreenWide = MediaQuery.of(context).size.width > 1500;
     return isScreenWide ? Axis.horizontal : Axis.vertical;
   }
 }
@@ -619,7 +616,7 @@ class Entry extends StatelessWidget with AdaptiveTextSize {
 
   Widget _subtitle(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 20, bottom: 25.0),
+      padding: const EdgeInsets.only(left: 20),
       child: Text(description,
           style: TextStyle(
             color: Colors.white,
@@ -656,7 +653,7 @@ class Entry extends StatelessWidget with AdaptiveTextSize {
   Widget _tecnologies(BuildContext context) {
     if (tecnologies.isEmpty) return Container();
     return Padding(
-      padding: const EdgeInsets.only(left: 30),
+      padding: const EdgeInsets.only(left: 30, top: 25),
       child: Flex(
         crossAxisAlignment: isVertical(context)
             ? CrossAxisAlignment.center
@@ -693,7 +690,6 @@ class Entry extends StatelessWidget with AdaptiveTextSize {
     for (var i = 0; i < images.length; i++) {
       provisionalChilds.add(Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           images[i].path.isEmpty
               ? Container()
@@ -707,12 +703,11 @@ class Entry extends StatelessWidget with AdaptiveTextSize {
               : Padding(
                   padding: const EdgeInsets.symmetric(vertical: 20.0),
                   child: SizedBox(
-                      width: 400,
-                      height: 100,
+                      width: 450,//landscape size
                       child: Padding(
                         padding: const EdgeInsets.only(top: 8.0),
                         child: RichText(
-                          textAlign: TextAlign.justify,
+                          textAlign: TextAlign.center,
                           text: TextSpan(
                             text: images[i].descriptionTitle,
                             style: TextStyle(
@@ -741,11 +736,14 @@ class Entry extends StatelessWidget with AdaptiveTextSize {
       if (imagesProcessed >= imagesPerRow) {
         childs.add(Padding(
           padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 0),
-          child: Flex(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            direction: currentDirection(context),
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: provisionalChilds,
+          child: SizedBox(
+            width: MediaQuery.of(context).size.width,
+            child: Flex(
+              crossAxisAlignment: currentDirection(context) == Axis.vertical ? CrossAxisAlignment.center : CrossAxisAlignment.start,
+              direction: currentDirection(context),
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: provisionalChilds,
+            ),
           ),
         ));
         provisionalChilds = [];
@@ -753,9 +751,8 @@ class Entry extends StatelessWidget with AdaptiveTextSize {
       }
     }
     return Padding(
-      padding: const EdgeInsets.only(top: 30.0),
+      padding: const EdgeInsets.only(top: 30.0, left: 20),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: childs,
       ),
     );

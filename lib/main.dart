@@ -6,7 +6,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 Future main() async {
   await dotenv.load(
-    fileName: ".env",
+    fileName: "dotenv",
   );
 
   runApp(const MyApp());

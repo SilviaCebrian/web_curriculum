@@ -35,7 +35,7 @@ class _HomeTabState extends State<HomeTab> {
                         ))),
                 child: isScreenWide
                     ? Row(
-                        children: _content(50, 20),
+                        children: _content(35, 20),
                       )
                     : Column(
                         children: _content(30, 20),
@@ -98,9 +98,10 @@ class _HomeTabState extends State<HomeTab> {
     return Padding(
       padding: const EdgeInsets.only(bottom: 20.0, left: 20, right: 20),
       child: Text(AppLocalizations.of(context).homeTabTitle,
+      textAlign: TextAlign.center,
           style: TextStyle(
               color: Colors.white,
-              fontFamily: 'Boogaloo',
+              fontFamily: 'Questrial',
               fontSize: _fontSize,
               shadows: const [
                 Shadow(
@@ -126,6 +127,7 @@ class _HomeTabState extends State<HomeTab> {
           style: const TextStyle(
               color: Color.fromARGB(255, 190, 190, 190),
               fontFamily: 'Questrial',
+              fontWeight: FontWeight.bold,
               fontSize: 20)),
     );
   }
