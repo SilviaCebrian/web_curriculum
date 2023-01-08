@@ -703,7 +703,7 @@ class Entry extends StatelessWidget with AdaptiveTextSize {
               : Padding(
                   padding: const EdgeInsets.symmetric(vertical: 20.0),
                   child: SizedBox(
-                      width: 450,//landscape size
+                      width: MediaQuery.of(context).size.width > 1500 ? imageSize.width : MediaQuery.of(context).size.width,//landscape size
                       child: Padding(
                         padding: const EdgeInsets.only(top: 8.0),
                         child: RichText(
