@@ -3,7 +3,7 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "713564daae558c7cb739be1190abc47e",
+  "assets/AssetManifest.json": "2a935277518451e24724781b3b95d7b5",
 "assets/assets/dotenv": "cb2440a290a922a11079f2c1973b128b",
 "assets/assets/fonts/Boogaloo-Regular.ttf": "674e6a030ef6967f601a4c50fbe07868",
 "assets/assets/fonts/Chilanka-Regular.ttf": "ba32e9863761cf72f378cc16b5123854",
@@ -33,9 +33,9 @@ const RESOURCES = {
 "assets/assets/photos/flutter/aiju_platform/init_2.png": "8ff2d5444fb29e89f6c77c1c70351a27",
 "assets/assets/photos/flutter/aiju_platform/login.png": "9725d18d0be77f65bf1cf6e4c4b1164c",
 "assets/assets/photos/flutter/aiju_platform/proyect_structure.png": "06ef007d140b941574e3407c8b1cef1a",
-"assets/assets/photos/flutter/listnology/categories.png": "2942efd8e7fa94c31295932a4ec51ea3",
-"assets/assets/photos/flutter/listnology/create_share.png": "913418377ba1aa7def98e5feaee549d7",
-"assets/assets/photos/flutter/listnology/shopping_list.png": "6cb3588e15f7e0f324dac6787653881e",
+"assets/assets/photos/flutter/listnology/categories.png": "2d99034d74d2b09261ba455cc0a7b056",
+"assets/assets/photos/flutter/listnology/create_share.png": "fb3d97636d97377140616968b1a2d52c",
+"assets/assets/photos/flutter/listnology/shopping_list.png": "8d58bb87a710523f9421926ebd2dc7cc",
 "assets/assets/photos/flutter/web_curriculum/preview_1.png": "8a4d96d3309f2b88183f08b868dd1598",
 "assets/assets/photos/flutter/web_curriculum/preview_2.png": "d4cf5ffaad0acb1a699d71dbe2089772",
 "assets/assets/photos/flutter/web_curriculum/preview_3.png": "58e53f499fccee38cce21294af8429b0",
@@ -75,6 +75,8 @@ const RESOURCES = {
 "assets/curriculum/assets/assets/dotenv": "cb2440a290a922a11079f2c1973b128b",
 "assets/curriculum/assets/curriculum/assets/assets/dotenv": "cb2440a290a922a11079f2c1973b128b",
 "assets/curriculum/assets/curriculum/assets/curriculum/assets/assets/dotenv": "cb2440a290a922a11079f2c1973b128b",
+"assets/curriculum/assets/curriculum/assets/curriculum/assets/curriculum/assets/assets/dotenv": "cb2440a290a922a11079f2c1973b128b",
+"assets/curriculum/assets/curriculum/assets/curriculum/assets/dotenv": "cb2440a290a922a11079f2c1973b128b",
 "assets/curriculum/assets/curriculum/assets/dotenv": "cb2440a290a922a11079f2c1973b128b",
 "assets/curriculum/assets/dotenv": "cb2440a290a922a11079f2c1973b128b",
 "assets/dotenv": "cb2440a290a922a11079f2c1973b128b",
@@ -91,9 +93,9 @@ const RESOURCES = {
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
-"index.html": "fca4ff1e3aadfe5fe7e2809dacf89e24",
-"/": "fca4ff1e3aadfe5fe7e2809dacf89e24",
-"main.dart.js": "292e5589cb12883198ab16a01b707ca1",
+"index.html": "5a0496cac65eb79c6e3da73222b7be3f",
+"/": "5a0496cac65eb79c6e3da73222b7be3f",
+"main.dart.js": "5b301ca60a89defd8f183dcdffd7c0f4",
 "manifest.json": "ec08f8a41d3702051bc1b9403407148a",
 "version.json": "9640df76fad238e2ee9ec97b2687fe91"
 };
