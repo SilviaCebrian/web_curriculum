@@ -21,7 +21,7 @@ void linkedin() {
   Uri _uri = Uri(
       scheme: 'https',
       host: 'linkedin.com',
-      path: '/in/silvia-cebri%C3%A1n-ruiz-95a434169/');
+      path: '/in/silvia-c-95a434169/');
   launchURL(_uri);
 }
 
