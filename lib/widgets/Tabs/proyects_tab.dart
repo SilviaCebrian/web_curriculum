@@ -172,100 +172,172 @@ class _ProyectsTabState extends State<ProyectsTab> with AdaptiveTextSize {
 
   Widget _flutterContent() {
     return _section(_keys[0], 'assets/icons/flutter.png',
-        AppLocalizations.of(context).flutterName, [
+        AppLocalizations.of(context)!.flutterName, [
       Entry(
-        title: AppLocalizations.of(context).flutterContent3Title,
-        description: AppLocalizations.of(context).flutterContent3Subtitle,
+        title: AppLocalizations.of(context)!.flutterContent4Title,
+        description: AppLocalizations.of(context)!.flutterContent4Subtitle,
+        links: [
+          CustomHref(
+              uri: Uri(
+                  scheme: 'https',
+                  host: 'play.google.com',
+                  path: '/store/apps/details',
+                  queryParameters: {'id': 'com.petitc.es.app'}),
+              text: "Play Store"),
+          CustomHref(
+              uri: Uri(
+                scheme: 'https',
+                host: 'apps.apple.com',
+                path: '/us/app/petit-your-pets-app/id1660540565',
+              ),
+              text: "App Store"),
+        ],
+        tecnologies: AppLocalizations.of(context)!.flutterContent4Tecnologies,
+        images: [
+          CustomImages(
+              'assets/photos/flutter/petit/sign_up.png',
+              AppLocalizations.of(context)!.flutterContent4Image1Title,
+              AppLocalizations.of(context)!.flutterContent4Image1Description),
+          CustomImages(
+              'assets/photos/flutter/petit/pincode.png',
+              AppLocalizations.of(context)!.flutterContent4Image2Title,
+              AppLocalizations.of(context)!.flutterContent4Image2Description),
+          CustomImages(
+              'assets/photos/flutter/petit/login.png',
+              AppLocalizations.of(context)!.flutterContent4Image3Title,
+              AppLocalizations.of(context)!.flutterContent4Image3Description),
+          CustomImages(
+              'assets/photos/flutter/petit/event.png',
+              AppLocalizations.of(context)!.flutterContent4Image4Title,
+              AppLocalizations.of(context)!.flutterContent4Image4Description),
+          CustomImages(
+              'assets/photos/flutter/petit/ranking.png',
+              AppLocalizations.of(context)!.flutterContent4Image5Title,
+              AppLocalizations.of(context)!.flutterContent4Image5Description),
+          CustomImages(
+              'assets/photos/flutter/petit/voting.png',
+              AppLocalizations.of(context)!.flutterContent4Image6Title,
+              AppLocalizations.of(context)!.flutterContent4Image6Description),
+          CustomImages(
+              'assets/photos/flutter/petit/chat_global.png',
+              AppLocalizations.of(context)!.flutterContent4Image7Title,
+              AppLocalizations.of(context)!.flutterContent4Image7Description),
+          CustomImages(
+              'assets/photos/flutter/petit/chat_group.png',
+              AppLocalizations.of(context)!.flutterContent4Image8Title,
+              AppLocalizations.of(context)!.flutterContent4Image8Description),
+          CustomImages(
+              'assets/photos/flutter/petit/chat_person.png',
+              AppLocalizations.of(context)!.flutterContent4Image9Title,
+              AppLocalizations.of(context)!.flutterContent4Image9Description),
+          CustomImages(
+              'assets/photos/flutter/petit/profile.png',
+              AppLocalizations.of(context)!.flutterContent4Image10Title,
+              AppLocalizations.of(context)!.flutterContent4Image10Description),
+          CustomImages(
+              'assets/photos/flutter/petit/edit_profile.png',
+              AppLocalizations.of(context)!.flutterContent4Image11Title,
+              AppLocalizations.of(context)!.flutterContent4Image11Description),
+          CustomImages(
+              'assets/photos/flutter/petit/settings.png',
+              AppLocalizations.of(context)!.flutterContent4Image12Title,
+              AppLocalizations.of(context)!.flutterContent4Image12Description),
+        ],
+        imageSize: portrait,
+      ),
+      Entry(
+        title: AppLocalizations.of(context)!.flutterContent3Title,
+        description: AppLocalizations.of(context)!.flutterContent3Subtitle,
         links: const [],
         tecnologies: '',
         images: [
           CustomImages(
               'assets/photos/flutter/web_curriculum/preview_1.png',
-              AppLocalizations.of(context).flutterContent3Image1Title,
-              AppLocalizations.of(context).flutterContent3Image1Description),
+              AppLocalizations.of(context)!.flutterContent3Image1Title,
+              AppLocalizations.of(context)!.flutterContent3Image1Description),
           CustomImages(
               'assets/photos/flutter/web_curriculum/preview_2.png',
-              AppLocalizations.of(context).flutterContent3Image2Title,
-              AppLocalizations.of(context).flutterContent3Image2Description),
+              AppLocalizations.of(context)!.flutterContent3Image2Title,
+              AppLocalizations.of(context)!.flutterContent3Image2Description),
           CustomImages(
               'assets/photos/flutter/web_curriculum/preview_3.png',
-              AppLocalizations.of(context).flutterContent3Image3Title,
-              AppLocalizations.of(context).flutterContent3Image3Description),
+              AppLocalizations.of(context)!.flutterContent3Image3Title,
+              AppLocalizations.of(context)!.flutterContent3Image3Description),
         ],
         imageSize: landscape,
       ),
       Entry(
-        title: AppLocalizations.of(context).flutterContent2Title,
-        description: AppLocalizations.of(context).flutterContent2Subtitle,
+        title: AppLocalizations.of(context)!.flutterContent2Title,
+        description: AppLocalizations.of(context)!.flutterContent2Subtitle,
         links: [
           CustomHref(
               uri: Uri(
                 scheme: 'https',
                 host: 'www.aiju.es',
-                path: '/proyectos/cloud-api-sobre-inteligencia-artificial/',
+                path:
+                    '/2023/02/13/aiju-e-iti-trabajan-en-un-pasaporte-digital-para-juguetes-inteligentes-que-evitara-su-falsificacion-y-facilitara-su-reciclaje/',
               ),
-              text: AppLocalizations.of(context).flutterContent2UrlText1),
+              text: AppLocalizations.of(context)!.flutterContent2UrlText3),
           CustomHref(
               uri: Uri(
                 scheme: 'https',
                 host: 'www.aiju.es',
                 path: '/proyectos/inteligencia-artificial-multisectorial/',
               ),
-              text: AppLocalizations.of(context).flutterContent2UrlText2),
+              text: AppLocalizations.of(context)!.flutterContent2UrlText2),
           CustomHref(
               uri: Uri(
                 scheme: 'https',
                 host: 'www.aiju.es',
-                // path:
-                //     '/proyectos/inteligencia-artificial-multisectorial/',
+                path: '/proyectos/cloud-api-sobre-inteligencia-artificial/',
               ),
-              text: AppLocalizations.of(context).flutterContent2UrlText3)
+              text: AppLocalizations.of(context)!.flutterContent2UrlText1),
         ],
-        tecnologies: AppLocalizations.of(context).flutterContent2Tecnologies,
+        tecnologies: AppLocalizations.of(context)!.flutterContent2Tecnologies,
         images: [
           CustomImages(
             'assets/photos/flutter/aiju_platform/login.png',
-            AppLocalizations.of(context).flutterContent2Image1Title,
-            AppLocalizations.of(context).flutterContent2Image1Description,
+            AppLocalizations.of(context)!.flutterContent2Image1Title,
+            AppLocalizations.of(context)!.flutterContent2Image1Description,
           ),
           CustomImages(
               'assets/photos/flutter/aiju_platform/init.png',
-              AppLocalizations.of(context).flutterContent2Image2Title,
-              AppLocalizations.of(context).flutterContent2Image2Description),
+              AppLocalizations.of(context)!.flutterContent2Image2Title,
+              AppLocalizations.of(context)!.flutterContent2Image2Description),
           CustomImages(
               'assets/photos/flutter/aiju_platform/init_2.png',
-              AppLocalizations.of(context).flutterContent2Image3Title,
-              AppLocalizations.of(context).flutterContent2Image3Description),
+              AppLocalizations.of(context)!.flutterContent2Image3Title,
+              AppLocalizations.of(context)!.flutterContent2Image3Description),
           CustomImages(
               'assets/photos/flutter/aiju_platform/chat_bot_detail.png',
-              AppLocalizations.of(context).flutterContent2Image4Title,
-              AppLocalizations.of(context).flutterContent2Image4Description),
+              AppLocalizations.of(context)!.flutterContent2Image4Title,
+              AppLocalizations.of(context)!.flutterContent2Image4Description),
           CustomImages(
               'assets/photos/flutter/aiju_platform/image_recognition.png',
-              AppLocalizations.of(context).flutterContent2Image5Title,
-              AppLocalizations.of(context).flutterContent2Image5Description),
+              AppLocalizations.of(context)!.flutterContent2Image5Title,
+              AppLocalizations.of(context)!.flutterContent2Image5Description),
           CustomImages(
               'assets/photos/flutter/aiju_platform/feeling_recognition.png',
-              AppLocalizations.of(context).flutterContent2Image6Title,
-              AppLocalizations.of(context).flutterContent2Image6Description),
+              AppLocalizations.of(context)!.flutterContent2Image6Title,
+              AppLocalizations.of(context)!.flutterContent2Image6Description),
           CustomImages(
               'assets/photos/flutter/aiju_platform/google_ai_recognition_2021.png',
-              AppLocalizations.of(context).flutterContent2Image7Title,
-              AppLocalizations.of(context).flutterContent2Image7Description),
+              AppLocalizations.of(context)!.flutterContent2Image7Title,
+              AppLocalizations.of(context)!.flutterContent2Image7Description),
           CustomImages(
               'assets/photos/flutter/aiju_platform/demo_info.png',
-              AppLocalizations.of(context).flutterContent2Image8Title,
-              AppLocalizations.of(context).flutterContent2Image8Description),
+              AppLocalizations.of(context)!.flutterContent2Image8Title,
+              AppLocalizations.of(context)!.flutterContent2Image8Description),
           CustomImages(
               'assets/photos/flutter/aiju_platform/proyect_structure.png',
-              AppLocalizations.of(context).flutterContent2Image9Title,
-              AppLocalizations.of(context).flutterContent2Image9Description),
+              AppLocalizations.of(context)!.flutterContent2Image9Title,
+              AppLocalizations.of(context)!.flutterContent2Image9Description),
         ],
         imageSize: landscape,
       ),
       Entry(
-        title: AppLocalizations.of(context).flutterContent1Title,
-        description: AppLocalizations.of(context).flutterContent1Subtitle,
+        title: AppLocalizations.of(context)!.flutterContent1Title,
+        description: AppLocalizations.of(context)!.flutterContent1Subtitle,
         links: [
           CustomHref(
               uri: Uri(
@@ -278,22 +350,22 @@ class _ProyectsTabState extends State<ProyectsTab> with AdaptiveTextSize {
                     'gl': 'US'
                   }),
               //=US
-              text: AppLocalizations.of(context).flutterContent1UrlText1),
+              text: AppLocalizations.of(context)!.flutterContent1UrlText1),
         ],
-        tecnologies: AppLocalizations.of(context).flutterContent1Tecnologies,
+        tecnologies: AppLocalizations.of(context)!.flutterContent1Tecnologies,
         images: [
           CustomImages(
               'assets/photos/flutter/listnology/shopping_list.png',
-              AppLocalizations.of(context).flutterContent1Image1Title,
-              AppLocalizations.of(context).flutterContent1Image1Description),
+              AppLocalizations.of(context)!.flutterContent1Image1Title,
+              AppLocalizations.of(context)!.flutterContent1Image1Description),
           CustomImages(
               'assets/photos/flutter/listnology/categories.png',
-              AppLocalizations.of(context).flutterContent1Image2Title,
-              AppLocalizations.of(context).flutterContent1Image2Description),
+              AppLocalizations.of(context)!.flutterContent1Image2Title,
+              AppLocalizations.of(context)!.flutterContent1Image2Description),
           CustomImages(
               'assets/photos/flutter/listnology/create_share.png',
-              AppLocalizations.of(context).flutterContent1Image3Title,
-              AppLocalizations.of(context).flutterContent1Image3Description),
+              AppLocalizations.of(context)!.flutterContent1Image3Title,
+              AppLocalizations.of(context)!.flutterContent1Image3Description),
         ],
         imageSize: portrait,
       ),
@@ -302,10 +374,39 @@ class _ProyectsTabState extends State<ProyectsTab> with AdaptiveTextSize {
 
   Widget _unityContent() {
     return _section(_keys[1], 'assets/icons/unity.png',
-        AppLocalizations.of(context).unityName, [
+        AppLocalizations.of(context)!.unityName, [
       Entry(
-          title: AppLocalizations.of(context).unityContent7Title,
-          description: AppLocalizations.of(context).unityContent7Subtitle,
+          title: AppLocalizations.of(context)!.unityContent8Title,
+          description: AppLocalizations.of(context)!.unityContent8Subtitle,
+          links: [
+            CustomHref(
+                uri: Uri(
+                  scheme: 'https',
+                  host: 'www.informacion.es',
+                  path:
+                      '/alcoy/2023/05/17/juguetes-inteligencia-artificial-triciclos-tablets-87484422.html',
+                ),
+                text: AppLocalizations.of(context)!.unityContent8UrlText1)
+          ],
+          tecnologies: AppLocalizations.of(context)!.unityContent8Tecnologies,
+          images: [
+            CustomImages(
+                'assets/photos/unity/trycicle/datos.jpeg',
+                AppLocalizations.of(context)!.unityContent8Image1Title,
+                AppLocalizations.of(context)!.unityContent8Image1Description),
+            CustomImages(
+                'assets/photos/unity/trycicle/triciclo.png',
+                AppLocalizations.of(context)!.unityContent8Image2Title,
+                AppLocalizations.of(context)!.unityContent8Image2Description),
+            CustomImages(
+                'assets/photos/unity/trycicle/triciclo_nieve.png',
+                AppLocalizations.of(context)!.unityContent8Image3Title,
+                AppLocalizations.of(context)!.unityContent8Image3Description),
+          ],
+          imageSize: landscape),
+      Entry(
+          title: AppLocalizations.of(context)!.unityContent7Title,
+          description: AppLocalizations.of(context)!.unityContent7Subtitle,
           links: [
             CustomHref(
                 uri: Uri(
@@ -313,27 +414,27 @@ class _ProyectsTabState extends State<ProyectsTab> with AdaptiveTextSize {
                   host:
                       'play.google.com', // path: 'store/apps/details',// queryParameters: queryParameters3
                 ),
-                text: AppLocalizations.of(context).unityContent7UrlText1)
+                text: AppLocalizations.of(context)!.unityContent7UrlText1)
           ],
-          tecnologies: AppLocalizations.of(context).unityContent7Tecnologies,
+          tecnologies: AppLocalizations.of(context)!.unityContent7Tecnologies,
           images: [
             CustomImages(
                 'assets/photos/unity/intelect/preview_1.png',
-                AppLocalizations.of(context).unityContent7Image1Title,
-                AppLocalizations.of(context).unityContent7Image1Description),
+                AppLocalizations.of(context)!.unityContent7Image1Title,
+                AppLocalizations.of(context)!.unityContent7Image1Description),
             CustomImages(
                 'assets/photos/unity/intelect/preview_2.png',
-                AppLocalizations.of(context).unityContent7Image2Title,
-                AppLocalizations.of(context).unityContent7Image2Description),
+                AppLocalizations.of(context)!.unityContent7Image2Title,
+                AppLocalizations.of(context)!.unityContent7Image2Description),
             CustomImages(
                 'assets/photos/unity/intelect/preview_3.png',
-                AppLocalizations.of(context).unityContent7Image3Title,
-                AppLocalizations.of(context).unityContent7Image3Description),
+                AppLocalizations.of(context)!.unityContent7Image3Title,
+                AppLocalizations.of(context)!.unityContent7Image3Description),
           ],
           imageSize: portrait),
       Entry(
-          title: AppLocalizations.of(context).unityContent6Title,
-          description: AppLocalizations.of(context).unityContent6Subtitle,
+          title: AppLocalizations.of(context)!.unityContent6Title,
+          description: AppLocalizations.of(context)!.unityContent6Subtitle,
           links: [
             CustomHref(
                 uri: Uri(
@@ -341,187 +442,187 @@ class _ProyectsTabState extends State<ProyectsTab> with AdaptiveTextSize {
                     host: 'play.google.com',
                     path: 'store/apps/details',
                     queryParameters: {'id': 'com.laimprentacg.dulk'}),
-                text: AppLocalizations.of(context).unityContent6UrlText1)
+                text: AppLocalizations.of(context)!.unityContent6UrlText1)
           ],
-          tecnologies: AppLocalizations.of(context).unityContent6Tecnologies,
+          tecnologies: AppLocalizations.of(context)!.unityContent6Tecnologies,
           images: [
             CustomImages(
                 'assets/photos/unity/dulk/preview_1.png',
-                AppLocalizations.of(context).unityContent6Image1Title,
-                AppLocalizations.of(context).unityContent6Image1Description),
+                AppLocalizations.of(context)!.unityContent6Image1Title,
+                AppLocalizations.of(context)!.unityContent6Image1Description),
             CustomImages(
                 'assets/photos/unity/dulk/preview_2.png',
-                AppLocalizations.of(context).unityContent6Image2Title,
-                AppLocalizations.of(context).unityContent6Image2Description),
+                AppLocalizations.of(context)!.unityContent6Image2Title,
+                AppLocalizations.of(context)!.unityContent6Image2Description),
             CustomImages(
                 'assets/photos/unity/dulk/preview_3.png',
-                AppLocalizations.of(context).unityContent6Image3Title,
-                AppLocalizations.of(context).unityContent6Image3Description),
+                AppLocalizations.of(context)!.unityContent6Image3Title,
+                AppLocalizations.of(context)!.unityContent6Image3Description),
           ],
           imageSize: portrait),
       Entry(
-        title: AppLocalizations.of(context).unityContent5Title,
-        description: AppLocalizations.of(context).unityContent5Subtitle,
+        title: AppLocalizations.of(context)!.unityContent5Title,
+        description: AppLocalizations.of(context)!.unityContent5Subtitle,
         links: const [],
-        tecnologies: AppLocalizations.of(context).unityContent5Tecnologies,
+        tecnologies: AppLocalizations.of(context)!.unityContent5Tecnologies,
         images: [
           CustomImages(
               'assets/photos/unity/app_emotions/preview_3.png',
-              AppLocalizations.of(context).unityContent5Image1Title,
-              AppLocalizations.of(context).unityContent5Image1Description),
+              AppLocalizations.of(context)!.unityContent5Image1Title,
+              AppLocalizations.of(context)!.unityContent5Image1Description),
           CustomImages(
               'assets/photos/unity/app_emotions/preview_1.png',
-              AppLocalizations.of(context).unityContent5Image2Title,
-              AppLocalizations.of(context).unityContent5Image2Description),
+              AppLocalizations.of(context)!.unityContent5Image2Title,
+              AppLocalizations.of(context)!.unityContent5Image2Description),
           CustomImages(
               'assets/photos/unity/app_emotions/preview_2.png',
-              AppLocalizations.of(context).unityContent5Image3Title,
-              AppLocalizations.of(context).unityContent5Image3Description),
+              AppLocalizations.of(context)!.unityContent5Image3Title,
+              AppLocalizations.of(context)!.unityContent5Image3Description),
         ],
         imageSize: landscape,
       ),
       Entry(
-          title: AppLocalizations.of(context).unityContent4Title,
-          description: AppLocalizations.of(context).unityContent4Subtitle,
+          title: AppLocalizations.of(context)!.unityContent4Title,
+          description: AppLocalizations.of(context)!.unityContent4Subtitle,
           links: [
             CustomHref(
                 uri: Uri.parse('https://youtu.be/8xoEKQhVNn0'),
-                text: AppLocalizations.of(context).unityContent4UrlText1),
+                text: AppLocalizations.of(context)!.unityContent4UrlText1),
             CustomHref(
                 uri: Uri(
                     scheme: 'https',
                     host: 'play.google.com',
                     path: 'store/apps/details',
                     queryParameters: {'id': 'com.j3.ClipAR'}),
-                text: AppLocalizations.of(context).unityContent4UrlText2)
+                text: AppLocalizations.of(context)!.unityContent4UrlText2)
           ],
-          tecnologies: AppLocalizations.of(context).unityContent4Tecnologies,
+          tecnologies: AppLocalizations.of(context)!.unityContent4Tecnologies,
           images: [
             CustomImages(
                 'assets/photos/unity/clips_ar/preview_2.png',
-                AppLocalizations.of(context).unityContent4Image1Title,
-                AppLocalizations.of(context).unityContent4Image1Description),
+                AppLocalizations.of(context)!.unityContent4Image1Title,
+                AppLocalizations.of(context)!.unityContent4Image1Description),
             CustomImages(
                 'assets/photos/unity/clips_ar/preview_3.png',
-                AppLocalizations.of(context).unityContent4Image2Title,
-                AppLocalizations.of(context).unityContent4Image2Description),
+                AppLocalizations.of(context)!.unityContent4Image2Title,
+                AppLocalizations.of(context)!.unityContent4Image2Description),
             CustomImages(
                 'assets/photos/unity/clips_ar/preview_1.png',
-                AppLocalizations.of(context).unityContent4Image3Title,
-                AppLocalizations.of(context).unityContent4Image3Description),
+                AppLocalizations.of(context)!.unityContent4Image3Title,
+                AppLocalizations.of(context)!.unityContent4Image3Description),
           ],
           imageSize: portrait),
       Entry(
-          title: AppLocalizations.of(context).unityContent3Title,
-          description: AppLocalizations.of(context).unityContent3Subtitle,
+          title: AppLocalizations.of(context)!.unityContent3Title,
+          description: AppLocalizations.of(context)!.unityContent3Subtitle,
           links: [
             CustomHref(
                 uri: Uri.parse(
                     'https://cadenaser.com/emisora/2020/01/06/radio_alicante/1578304065_069723.html'),
-                text: AppLocalizations.of(context).unityContent3UrlText1),
+                text: AppLocalizations.of(context)!.unityContent3UrlText1),
             CustomHref(
                 uri: Uri(
                     scheme: 'https',
                     host: 'www.youtube.com',
                     path: 'watch',
                     queryParameters: {'v': '7gP5xETRlEs'}),
-                text: AppLocalizations.of(context).unityContent3UrlText2)
+                text: AppLocalizations.of(context)!.unityContent3UrlText2)
           ],
-          tecnologies: AppLocalizations.of(context).unityContent3Tecnologies,
+          tecnologies: AppLocalizations.of(context)!.unityContent3Tecnologies,
           images: [
             CustomImages(
                 'assets/photos/unity/unity_games_aiju/tambor.png',
-                AppLocalizations.of(context).unityContent3Image1Title,
-                AppLocalizations.of(context).unityContent3Image1Description),
+                AppLocalizations.of(context)!.unityContent3Image1Title,
+                AppLocalizations.of(context)!.unityContent3Image1Description),
             CustomImages(
                 'assets/photos/unity/unity_games_aiju/puzzles_2D.png',
-                AppLocalizations.of(context).unityContent3Image2Title,
-                AppLocalizations.of(context).unityContent3Image2Description),
+                AppLocalizations.of(context)!.unityContent3Image2Title,
+                AppLocalizations.of(context)!.unityContent3Image2Description),
             CustomImages(
                 'assets/photos/unity/unity_games_aiju/baby_susu.png',
-                AppLocalizations.of(context).unityContent3Image3Title,
-                AppLocalizations.of(context).unityContent3Image3Description),
+                AppLocalizations.of(context)!.unityContent3Image3Title,
+                AppLocalizations.of(context)!.unityContent3Image3Description),
             CustomImages(
                 'assets/photos/unity/unity_games_aiju/bike.png',
-                AppLocalizations.of(context).unityContent3Image4Title,
-                AppLocalizations.of(context).unityContent3Image4Description),
+                AppLocalizations.of(context)!.unityContent3Image4Title,
+                AppLocalizations.of(context)!.unityContent3Image4Description),
             CustomImages(
                 'assets/photos/unity/unity_games_aiju/emotions.png',
-                AppLocalizations.of(context).unityContent3Image5Title,
-                AppLocalizations.of(context).unityContent3Image5Description),
+                AppLocalizations.of(context)!.unityContent3Image5Title,
+                AppLocalizations.of(context)!.unityContent3Image5Description),
             CustomImages(
                 'assets/photos/unity/unity_games_aiju/paola_reina.png',
-                AppLocalizations.of(context).unityContent3Image6Title,
-                AppLocalizations.of(context).unityContent3Image6Description),
+                AppLocalizations.of(context)!.unityContent3Image6Title,
+                AppLocalizations.of(context)!.unityContent3Image6Description),
             CustomImages(
                 'assets/photos/unity/unity_games_aiju/puzzles_3D.png',
-                AppLocalizations.of(context).unityContent3Image7Title,
-                AppLocalizations.of(context).unityContent3Image7Description),
+                AppLocalizations.of(context)!.unityContent3Image7Title,
+                AppLocalizations.of(context)!.unityContent3Image7Description),
             CustomImages(
                 'assets/photos/unity/unity_games_aiju/puzzles_3D_2.png',
-                AppLocalizations.of(context).unityContent3Image8Title,
-                AppLocalizations.of(context).unityContent3Image8Description),
+                AppLocalizations.of(context)!.unityContent3Image8Title,
+                AppLocalizations.of(context)!.unityContent3Image8Description),
             CustomImages(
                 'assets/photos/unity/unity_games_aiju/tambor_v2.png',
-                AppLocalizations.of(context).unityContent3Image9Title,
-                AppLocalizations.of(context).unityContent3Image9Description),
+                AppLocalizations.of(context)!.unityContent3Image9Title,
+                AppLocalizations.of(context)!.unityContent3Image9Description),
           ],
           imageSize: landscape),
       Entry(
-          title: AppLocalizations.of(context).unityContent2Title,
-          description: AppLocalizations.of(context).unityContent2Subtitle,
+          title: AppLocalizations.of(context)!.unityContent2Title,
+          description: AppLocalizations.of(context)!.unityContent2Subtitle,
           links: [
             CustomHref(
                 uri: Uri.parse('https://www.youtube.com/watch?v=kjnKK92kBfw'),
-                text: AppLocalizations.of(context).unityContent2UrlText1),
+                text: AppLocalizations.of(context)!.unityContent2UrlText1),
             CustomHref(
                 uri: Uri(
                     scheme: 'https',
                     host: 'play.google.com',
                     path: 'store/apps/details',
                     queryParameters: {'id': 'com.j3.samtsudoe'}),
-                text: AppLocalizations.of(context).unityContent2UrlText2)
+                text: AppLocalizations.of(context)!.unityContent2UrlText2)
           ],
-          tecnologies: AppLocalizations.of(context).unityContent2Tecnologies,
+          tecnologies: AppLocalizations.of(context)!.unityContent2Tecnologies,
           images: [
             CustomImages(
                 'assets/photos/unity/samt_sudoe/preview_1.png',
-                AppLocalizations.of(context).unityContent2Image1Title,
-                AppLocalizations.of(context).unityContent2Image1Description),
+                AppLocalizations.of(context)!.unityContent2Image1Title,
+                AppLocalizations.of(context)!.unityContent2Image1Description),
             CustomImages(
                 'assets/photos/unity/samt_sudoe/preview_2.png',
-                AppLocalizations.of(context).unityContent2Image2Title,
-                AppLocalizations.of(context).unityContent2Image2Description),
+                AppLocalizations.of(context)!.unityContent2Image2Title,
+                AppLocalizations.of(context)!.unityContent2Image2Description),
             CustomImages(
                 'assets/photos/unity/samt_sudoe/preview_3.png',
-                AppLocalizations.of(context).unityContent2Image3Title,
-                AppLocalizations.of(context).unityContent2Image3Description),
+                AppLocalizations.of(context)!.unityContent2Image3Title,
+                AppLocalizations.of(context)!.unityContent2Image3Description),
           ],
           imageSize: landscape),
       Entry(
-          title: AppLocalizations.of(context).unityContent1Title,
-          description: AppLocalizations.of(context).unityContent1Subtitle,
+          title: AppLocalizations.of(context)!.unityContent1Title,
+          description: AppLocalizations.of(context)!.unityContent1Subtitle,
           links: [
             CustomHref(
                 uri: Uri(
                     scheme: 'https',
                     path: 'prezi.com/view/xvHj7gW5UaQEfnYatchS/'),
-                text: AppLocalizations.of(context).unityContent1UrlText1)
+                text: AppLocalizations.of(context)!.unityContent1UrlText1)
           ],
-          tecnologies: AppLocalizations.of(context).unityContent1Tecnologies,
+          tecnologies: AppLocalizations.of(context)!.unityContent1Tecnologies,
           images: [
             CustomImages(
                 'assets/photos/unity/tranquill_app/preview_1.png',
-                AppLocalizations.of(context).unityContent1Image1Title,
-                AppLocalizations.of(context).unityContent1Image1Description),
+                AppLocalizations.of(context)!.unityContent1Image1Title,
+                AppLocalizations.of(context)!.unityContent1Image1Description),
             CustomImages(
                 'assets/photos/unity/tranquill_app/preview_2.png',
-                AppLocalizations.of(context).unityContent1Image2Title,
-                AppLocalizations.of(context).unityContent1Image2Description),
+                AppLocalizations.of(context)!.unityContent1Image2Title,
+                AppLocalizations.of(context)!.unityContent1Image2Description),
             CustomImages(
                 'assets/photos/unity/tranquill_app/preview_3.png',
-                AppLocalizations.of(context).unityContent1Image3Title,
-                AppLocalizations.of(context).unityContent1Image3Description),
+                AppLocalizations.of(context)!.unityContent1Image3Title,
+                AppLocalizations.of(context)!.unityContent1Image3Description),
           ],
           imageSize: landscape)
     ]);
@@ -531,26 +632,30 @@ class _ProyectsTabState extends State<ProyectsTab> with AdaptiveTextSize {
     return _section(
       _keys[2],
       'assets/icons/solidity.png',
-      AppLocalizations.of(context).solidityName,
+      AppLocalizations.of(context)!.solidityName,
       [
         Entry(
-          title: AppLocalizations.of(context).solidityContent1Title,
-          description: AppLocalizations.of(context).solidityContent1Subtitle,
+          title: AppLocalizations.of(context)!.solidityContent1Title,
+          description: AppLocalizations.of(context)!.solidityContent1Subtitle,
           links: const [],
-          tecnologies: AppLocalizations.of(context).solidityContent1Tecnologies,
+          tecnologies:
+              AppLocalizations.of(context)!.solidityContent1Tecnologies,
           images: [
             CustomImages(
                 'assets/photos/solidity/fuguland/fugus.png',
-                AppLocalizations.of(context).solidityContent1Image1Title,
-                AppLocalizations.of(context).solidityContent1Image1Description),
+                AppLocalizations.of(context)!.solidityContent1Image1Title,
+                AppLocalizations.of(context)!
+                    .solidityContent1Image1Description),
             CustomImages(
                 'assets/photos/solidity/fuguland/whitepaper_pvp.png',
-                AppLocalizations.of(context).solidityContent1Image2Title,
-                AppLocalizations.of(context).solidityContent1Image2Description),
+                AppLocalizations.of(context)!.solidityContent1Image2Title,
+                AppLocalizations.of(context)!
+                    .solidityContent1Image2Description),
             CustomImages(
                 'assets/photos/solidity/fuguland/contract.png',
-                AppLocalizations.of(context).solidityContent1Image3Title,
-                AppLocalizations.of(context).solidityContent1Image3Description),
+                AppLocalizations.of(context)!.solidityContent1Image3Title,
+                AppLocalizations.of(context)!
+                    .solidityContent1Image3Description),
           ],
           imageSize: landscape,
         ),
@@ -635,7 +740,7 @@ class Entry extends StatelessWidget with AdaptiveTextSize {
           crossAxisAlignment: CrossAxisAlignment.start,
           direction: _currentDirection,
           children: [
-            Text(AppLocalizations.of(context).linksText,
+            Text(AppLocalizations.of(context)!.linksText,
                 style: TextStyle(
                     color: Colors.white,
                     fontFamily: 'Questrial',
@@ -660,7 +765,7 @@ class Entry extends StatelessWidget with AdaptiveTextSize {
             : CrossAxisAlignment.start,
         direction: currentDirection(context),
         children: [
-          Text(AppLocalizations.of(context).tecnologiesText,
+          Text(AppLocalizations.of(context)!.tecnologiesText,
               style: TextStyle(
                   color: Colors.white,
                   fontFamily: 'Questrial',
@@ -686,7 +791,7 @@ class Entry extends StatelessWidget with AdaptiveTextSize {
     List<Widget> provisionalChilds = [];
     int imagesProcessed = 0;
     int imagesPerRow = 3;
-
+    final Axis cd = currentDirection(context);
     for (var i = 0; i < images.length; i++) {
       provisionalChilds.add(Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -701,9 +806,15 @@ class Entry extends StatelessWidget with AdaptiveTextSize {
           images[i].description.isEmpty
               ? Container()
               : Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 20.0),
+                  padding: EdgeInsets.only(
+                      top: cd == Axis.vertical ? 40 : 20,
+                      bottom: cd == Axis.vertical ? 40 : 20),
                   child: SizedBox(
-                      width: MediaQuery.of(context).size.width > 1500 ? imageSize.width : MediaQuery.of(context).size.width,//landscape size
+                      width: MediaQuery.of(context).size.width > 1500
+                          ? imageSize.width * 3 < 1200
+                              ? imageSize.width + 200
+                              : imageSize.width
+                          : MediaQuery.of(context).size.width, //landscape size
                       child: Padding(
                         padding: const EdgeInsets.only(top: 8.0),
                         child: RichText(
@@ -739,8 +850,10 @@ class Entry extends StatelessWidget with AdaptiveTextSize {
           child: SizedBox(
             width: MediaQuery.of(context).size.width,
             child: Flex(
-              crossAxisAlignment: currentDirection(context) == Axis.vertical ? CrossAxisAlignment.center : CrossAxisAlignment.start,
-              direction: currentDirection(context),
+              crossAxisAlignment: cd == Axis.vertical
+                  ? CrossAxisAlignment.center
+                  : CrossAxisAlignment.start,
+              direction: cd,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: provisionalChilds,
             ),
@@ -779,7 +892,7 @@ class CustomHref extends StatelessWidget with AdaptiveTextSize {
           top: notMobile ? 0 : 15,
           bottom: notMobile ? 0 : 5),
       child: InkWell(
-        onTap: () => helper.launchURL(uri),
+        onTap: () => uri.path == '' ? {} : helper.launchURL(uri),
         child: Text(
           text,
           textAlign: TextAlign.start,

@@ -30,22 +30,23 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     contentViews = [
       ContentView(
           tab: CustomTab(
-              title: AppLocalizations.of(context).home.toUpperCase(),
+              title: AppLocalizations.of(context)!.home.toUpperCase(),
               position: 0),
           content: const HomeTab()),
+          // content: const AboutMeTab()),
       ContentView(
           tab: CustomTab(
-              title: AppLocalizations.of(context).aboutMe.toUpperCase(),
+              title: AppLocalizations.of(context)!.aboutMe.toUpperCase(),
               position: 1),
           content: const AboutMeTab()),
       ContentView(
           tab: CustomTab(
-              title: AppLocalizations.of(context).projects.toUpperCase(),
+              title: AppLocalizations.of(context)!.projects.toUpperCase(),
               position: 2),
           content: const ProyectsTab()),
       ContentView(
           tab: CustomTab(
-              title: AppLocalizations.of(context).contact.toUpperCase(),
+              title: AppLocalizations.of(context)!.contact.toUpperCase(),
               position: 3),
           content: const ContactTab()),
     ];

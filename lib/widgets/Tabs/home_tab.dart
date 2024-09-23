@@ -1,3 +1,4 @@
+import 'package:curriculum_web/theme/my_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:curriculum_web/widgets/Custom/animated_list.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -62,13 +63,13 @@ class _HomeTabState extends State<HomeTab> {
         child: AnimatedCustomList(
           fromTop: true,
           items: [
-            _textItem(AppLocalizations.of(context).knowledgeText),
-            _textItem(AppLocalizations.of(context).knowledge_1),
-            _textItem(AppLocalizations.of(context).knowledge_2),
-            _textItem(AppLocalizations.of(context).knowledge_3),
-            _textItem(AppLocalizations.of(context).knowledge_4),
-            _textItem(AppLocalizations.of(context).knowledge_5),
-            _textItem(AppLocalizations.of(context).knowledge_6),
+            _textItem(AppLocalizations.of(context)!.knowledgeText),
+            _textItem(AppLocalizations.of(context)!.knowledge_1),
+            _textItem(AppLocalizations.of(context)!.knowledge_2),
+            _textItem(AppLocalizations.of(context)!.knowledge_3),
+            _textItem(AppLocalizations.of(context)!.knowledge_4),
+            _textItem(AppLocalizations.of(context)!.knowledge_5),
+            _textItem(AppLocalizations.of(context)!.knowledge_6),
           ],
           padding: const EdgeInsets.symmetric(horizontal: 36.0, vertical: 16),
           initialDelay: 250,
@@ -80,25 +81,45 @@ class _HomeTabState extends State<HomeTab> {
   }
 
   Widget _me() {
-    return Container(
-      margin: const EdgeInsets.only(bottom: 60),
-      height: 350,
-      width: 350,
-      decoration: BoxDecoration(
-          image: DecorationImage(
-              image: const AssetImage('assets/photos/me.png'),
-              colorFilter: ColorFilter.mode(
-                Colors.white.withOpacity(0.8),
-                BlendMode.modulate,
-              ))),
+    return Center(
+      child: Container(
+        // margin: const EdgeInsets.only(bottom: 60, top: 30),
+        width: 410,
+        height: 410,
+        decoration: BoxDecoration(
+          // shape: BoxShape.circle,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.3),
+              spreadRadius: 4,
+              blurRadius: 8,
+              offset: const Offset(0, 4),
+            ),
+          ],
+          borderRadius: BorderRadius.circular(53),
+          border: Border.all(
+            color: myTheme.primaryColor,
+            width: 4,
+          ),
+        ),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(52),
+          child: Image.asset(
+            'assets/photos/me_2.jpeg',
+            width: 410,
+            height: 410,
+            fit: BoxFit.cover,
+          ),
+        ),
+      ),
     );
   }
 
   Widget _title(double _fontSize, double _padding) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 20.0, left: 20, right: 20),
-      child: Text(AppLocalizations.of(context).homeTabTitle,
-      textAlign: TextAlign.center,
+      padding: const EdgeInsets.only(bottom: 20.0, left: 20, right: 20, top: 40),
+      child: Text(AppLocalizations.of(context)!.homeTabTitle,
+          textAlign: TextAlign.center,
           style: TextStyle(
               color: Colors.white,
               fontFamily: 'Questrial',
@@ -121,7 +142,7 @@ class _HomeTabState extends State<HomeTab> {
   Widget _subtitle(int _fontSize, double _padding) {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 30.0),
-      child: Text(AppLocalizations.of(context).homeTabSubtitle,
+      child: Text(AppLocalizations.of(context)!.homeTabSubtitle,
           overflow: TextOverflow.fade,
           textAlign: TextAlign.center,
           style: const TextStyle(

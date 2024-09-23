@@ -36,13 +36,13 @@ class CustomFullScreenWidget extends StatelessWidget {
                       : backgroundColor,
                   pageBuilder: (BuildContext context, _, __) {
                     return FullScreenPageCustom(
+                      backgroundColor: backgroundColor,
+                      backgroundIsTransparent: backgroundIsTransparent,
+                      disposeLevel: disposeLevel,
                       child: Image.asset(path,
                           fit: MediaQuery.of(context).size.width >= 1500
                               ? BoxFit.contain
                               : BoxFit.fitWidth),
-                      backgroundColor: backgroundColor,
-                      backgroundIsTransparent: backgroundIsTransparent,
-                      disposeLevel: disposeLevel,
                     );
                   }));
         },
@@ -184,27 +184,35 @@ class _FullScreenPageCustomState extends State<FullScreenPageCustom> {
       backgroundColor: widget.backgroundIsTransparent
           ? Colors.transparent
           : widget.backgroundColor,
-      body: Container(
-          color: widget.backgroundColor.withOpacity(opacity),
-          constraints: BoxConstraints.expand(
-            height: MediaQuery.of(context).size.height,
-          ),
-          child: Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
-            Padding(
-              padding: const EdgeInsets.only(bottom: 30),
-              child: CloseButtonAnimated(
-                  buttonSize: 50,
-                  color: Theme.of(context).primaryColor,
-                  onPressed: () => Navigator.of(context).pop()),
+      body: GestureDetector(
+        onTap: () => Navigator.of(context).pop(),
+        child: Container(
+            color: widget.backgroundColor.withOpacity(opacity),
+            constraints: BoxConstraints.expand(
+              height: MediaQuery.of(context).size.height,
             ),
-            InteractiveViewer(
-                minScale: 1,
-                maxScale: 4,
-                child: SizedBox(
-                    width: MediaQuery.of(context).size.width,
-                    height: MediaQuery.of(context).size.height - 200,
-                    child: Center(child: widget.child))),
-          ])),
+            child:
+                Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
+              Padding(
+                padding: const EdgeInsets.only(bottom: 30),
+                child: CloseButtonAnimated(
+                    buttonSize: 50,
+                    color: Theme.of(context).primaryColor,
+                    onPressed: () => Navigator.of(context).pop()),
+              ),
+              InteractiveViewer(
+                  minScale: 1,
+                  maxScale: 4,
+                  child: SizedBox(
+                      width: MediaQuery.of(context).size.width,
+                      height: MediaQuery.of(context).size.height - 200,
+                      child: Center(
+                          child: GestureDetector(
+                        onTap: () {},
+                        child: widget.child,
+                      )))),
+            ])),
+      ),
     );
   }
 }

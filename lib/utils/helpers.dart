@@ -37,10 +37,10 @@ void telegram() {
 }
 
 void twitter() {
-  //https://twitter.com/messages/compose?recipient_id=1547645779
+  //https://x.com/messages/compose?recipient_id=1547645779
   Uri _uri = Uri(
       scheme: 'https',
-      host: 'twitter.com',
+      host: 'x.com',
       path: '/messages/compose',
       queryParameters: {'recipient_id': '1547645779'});
   launchURL(_uri);

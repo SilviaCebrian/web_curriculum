@@ -114,7 +114,7 @@ class _AboutMeTabState extends State<AboutMeTab> {
               alignment: Alignment.centerLeft,
               child: RichText(
                 text: TextSpan(
-                  text: AppLocalizations.of(context).yearsWorking,
+                  text: getYearsWorking(),
                   style: const TextStyle(
                       height: 1,
                       color: Colors.white,
@@ -136,8 +136,8 @@ class _AboutMeTabState extends State<AboutMeTab> {
               children: [
                 Text(
                     isScreenWide
-                        ? AppLocalizations.of(context).yearsWorkingMultiText1
-                        : AppLocalizations.of(context).yearsWorkingMultiText2,
+                        ? AppLocalizations.of(context)!.yearsWorkingMultiText1
+                        : AppLocalizations.of(context)!.yearsWorkingMultiText2,
                     textAlign: TextAlign.left,
                     style: const TextStyle(
                         leadingDistribution:
@@ -162,6 +162,12 @@ class _AboutMeTabState extends State<AboutMeTab> {
     );
   }
 
+  String getYearsWorking() {
+    final int currentYear = DateTime.now().year;
+    const int startYear = 2018;
+    return (currentYear - startYear).toString();
+  }
+
   Widget aboutContentRight(bool _isScreenWide) {
     return SizedBox(
       width: 500,
@@ -174,14 +180,14 @@ class _AboutMeTabState extends State<AboutMeTab> {
             children: [
               Padding(
                 padding: const EdgeInsets.only(bottom: 10.0),
-                child: Text(AppLocalizations.of(context).experienceTitle,
+                child: Text(AppLocalizations.of(context)!.experienceTitle,
                     style: const TextStyle(
                         color: Colors.white,
                         fontFamily: 'Questrial',
                         fontSize: 45)),
               ),
               const SizedBox(height: 5),
-              Text(AppLocalizations.of(context).experienceSubtitle,
+              Text(AppLocalizations.of(context)!.experienceSubtitle,
                   style: const TextStyle(
                       leadingDistribution: TextLeadingDistribution.proportional,
                       color: Colors.grey,
@@ -195,22 +201,22 @@ class _AboutMeTabState extends State<AboutMeTab> {
               fromTop: true,
               items: [
                 _curriculumEntry(
-                    AppLocalizations.of(context).experienceEntry1Title,
+                    AppLocalizations.of(context)!.experienceEntry2Title,
                     _listOfThings([
-                      AppLocalizations.of(context).experienceEntry1Example1,
-                      AppLocalizations.of(context).experienceEntry1Example2,
-                      AppLocalizations.of(context).experienceEntry1Example3,
+                      AppLocalizations.of(context)!.experienceEntry2Example1,
+                      AppLocalizations.of(context)!.experienceEntry2Example2,
                     ])),
                 _curriculumEntry(
-                    AppLocalizations.of(context).experienceEntry2Title,
+                    AppLocalizations.of(context)!.experienceEntry1Title,
                     _listOfThings([
-                      AppLocalizations.of(context).experienceEntry2Example1,
-                      AppLocalizations.of(context).experienceEntry2Example2,
+                      AppLocalizations.of(context)!.experienceEntry1Example1,
+                      AppLocalizations.of(context)!.experienceEntry1Example2,
+                      AppLocalizations.of(context)!.experienceEntry1Example3,
                     ])),
                 _curriculumEntry(
-                    AppLocalizations.of(context).experienceEntry3Title,
+                    AppLocalizations.of(context)!.experienceEntry3Title,
                     _listOfThings([
-                      AppLocalizations.of(context).experienceEntry3Example1,
+                      AppLocalizations.of(context)!.experienceEntry3Example1,
                     ])),
               ],
               padding:
@@ -273,25 +279,26 @@ class _AboutMeTabState extends State<AboutMeTab> {
           fromTop: false,
           items: [
             _knowledgeWidget(
-                "assets/icons/traducir.png",
-                AppLocalizations.of(context).otherKnowledge1Title,
-                AppLocalizations.of(context).otherKnowledge1Description),
-            _knowledgeWidget(
                 "assets/icons/code.png",
-                AppLocalizations.of(context).otherKnowledge2Title,
-                AppLocalizations.of(context).otherKnowledge2Description),
+                AppLocalizations.of(context)!.otherKnowledge2Title,
+                AppLocalizations.of(context)!.otherKnowledge2Description),
             _knowledgeWidget(
                 "assets/icons/herramienta.png",
-                AppLocalizations.of(context).otherKnowledge3Title,
-                AppLocalizations.of(context).otherKnowledge3Description),
+                AppLocalizations.of(context)!.otherKnowledge3Title,
+                AppLocalizations.of(context)!.otherKnowledge3Description),
+            _knowledgeWidget(
+                //Firebase auth, messagin, storage, distribution, analitics
+                "assets/icons/firebase.png",
+                AppLocalizations.of(context)!.otherKnowledge15Title,
+                AppLocalizations.of(context)!.otherKnowledge15Description),
             _knowledgeWidget(
                 "assets/icons/bd.png",
-                AppLocalizations.of(context).otherKnowledge4Title,
-                AppLocalizations.of(context).otherKnowledge4Description),
+                AppLocalizations.of(context)!.otherKnowledge4Title,
+                AppLocalizations.of(context)!.otherKnowledge4Description),
             _knowledgeWidget(
                 "assets/icons/seo.png",
-                AppLocalizations.of(context).otherKnowledge5Title,
-                AppLocalizations.of(context).otherKnowledge5Description),
+                AppLocalizations.of(context)!.otherKnowledge5Title,
+                AppLocalizations.of(context)!.otherKnowledge5Description),
           ],
           padding: EdgeInsets.zero,
           initialDelay: 1700,
@@ -304,25 +311,61 @@ class _AboutMeTabState extends State<AboutMeTab> {
             fromTop: false,
             items: [
               _knowledgeWidget(
+                  //Sistema de versiones version control systems,
+                  "assets/icons/version_control_2.png",
+                  AppLocalizations.of(context)!.otherKnowledge11Title,
+                  AppLocalizations.of(context)!.otherKnowledge11Description),
+              _knowledgeWidget(
+                  //UI/UX - Figma
+                  "assets/icons/ux_ui.png",
+                  AppLocalizations.of(context)!.otherKnowledge12Title,
+                  AppLocalizations.of(context)!.otherKnowledge12Description),
+              _knowledgeWidget(
+                  //Clean architecture y Patrones -> de diseño(Singleton, Factor) o de arquitectura MVC/MVVM design patterns
+                  "assets/icons/architecture_patterns.png",
+                  AppLocalizations.of(context)!.otherKnowledge13Title,
+                  AppLocalizations.of(context)!.otherKnowledge13Description),
+              _knowledgeWidget(
+                  //Herramientas de gestion : Jira
+                  "assets/icons/gestion.png",
+                  AppLocalizations.of(context)!.otherKnowledge14Title,
+                  AppLocalizations.of(context)!.otherKnowledge14Description),
+              _knowledgeWidget(
+                  "assets/icons/traducir.png",
+                  AppLocalizations.of(context)!.otherKnowledge1Title,
+                  AppLocalizations.of(context)!.otherKnowledge1Description),
+            ],
+            padding: _isScreenWide ? EdgeInsets.zero : EdgeInsets.zero,
+            initialDelay: 1600,
+            direction: _isScreenWide ? Axis.horizontal : Axis.vertical,
+            height: _isScreenWide ? 160 : _knowledgeWidgetHeight * 5,
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: 25.0),
+          child: AnimatedCustomList(
+            fromTop: false,
+            items: [
+              _knowledgeWidget(
                   "assets/icons/ar.png",
-                    AppLocalizations.of(context).otherKnowledge6Title,
-               AppLocalizations.of(context).otherKnowledge6Description),
+                  AppLocalizations.of(context)!.otherKnowledge6Title,
+                  AppLocalizations.of(context)!.otherKnowledge6Description),
               _knowledgeWidget(
                   "assets/icons/ai.png",
-                     AppLocalizations.of(context).otherKnowledge7Title,
-               AppLocalizations.of(context).otherKnowledge7Description),
+                  AppLocalizations.of(context)!.otherKnowledge7Title,
+                  AppLocalizations.of(context)!.otherKnowledge7Description),
               _knowledgeWidget(
                   "assets/icons/blockchain.png",
-                    AppLocalizations.of(context).otherKnowledge8Title,
-               AppLocalizations.of(context).otherKnowledge8Description),
+                  AppLocalizations.of(context)!.otherKnowledge8Title,
+                  AppLocalizations.of(context)!.otherKnowledge8Description),
               _knowledgeWidget(
                   "assets/icons/design.png",
-                  AppLocalizations.of(context).otherKnowledge9Title,
-               AppLocalizations.of(context).otherKnowledge9Description),
+                  AppLocalizations.of(context)!.otherKnowledge9Title,
+                  AppLocalizations.of(context)!.otherKnowledge9Description),
               _knowledgeWidget(
                   "assets/icons/robot.png",
-                    AppLocalizations.of(context).otherKnowledge10Title,
-               AppLocalizations.of(context).otherKnowledge10Description),
+                  AppLocalizations.of(context)!.otherKnowledge10Title,
+                  AppLocalizations.of(context)!.otherKnowledge10Description),
             ],
             padding: _isScreenWide ? EdgeInsets.zero : EdgeInsets.zero,
             initialDelay: 1600,
@@ -370,7 +413,7 @@ class _AboutMeTabState extends State<AboutMeTab> {
                   style: TextStyle(
                       color: Theme.of(context).primaryColor,
                       fontFamily: 'Questrial',
-                      fontSize: 20,
+                      fontSize: 18,
                       fontWeight: FontWeight.bold)),
             ),
             Text(
@@ -379,7 +422,7 @@ class _AboutMeTabState extends State<AboutMeTab> {
               style: const TextStyle(
                   color: Color.fromARGB(255, 255, 255, 255),
                   fontFamily: 'Questrial',
-                  fontSize: 16),
+                  fontSize: 14),
             ),
           ],
         ),

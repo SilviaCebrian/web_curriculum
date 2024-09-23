@@ -17,7 +17,7 @@ abstract class BaseView extends StatelessWidget {
       padding: const EdgeInsets.only(top: 20),
       child: RichText(
         text: TextSpan(
-          text: AppLocalizations.of(context).headerTitle,
+          text: AppLocalizations.of(context)!.headerTitle,
           style: const TextStyle(
               color: Colors.white, fontFamily: 'Dangrek', fontSize: 30),
           children: <TextSpan>[
@@ -44,7 +44,7 @@ abstract class BaseView extends StatelessWidget {
           alignment: Alignment.center,
           child: RichText(
             text: TextSpan(
-              text: AppLocalizations.of(context).email,
+              text: AppLocalizations.of(context)?.email,
               style: TextStyle(
                   color: Colors.white,
                   fontFamily: 'Dangrek',

@@ -1,10 +1,10 @@
 // ignore_for_file: avoid_print
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:emailjs/emailjs.dart' as emailjs;
 import 'package:curriculum_web/utils/helpers.dart' as helper;
-import 'package:emailjs/emailjs.dart';
 
 //https://dashboard.emailjs.com/admin/templates/em0l598
 // Para mandar los _emailForm se utiliza el servicio de emailjs con 200 emails gratis al mes.
@@ -57,14 +57,14 @@ class _ContactTabState extends State<ContactTab> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Text(
-              AppLocalizations.of(context).contactText,
+              AppLocalizations.of(context)!.contactText,
               style: const TextStyle(
                   color: Colors.white, fontFamily: 'Dangrek', fontSize: 32),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 25.0),
               child: Text(
-                AppLocalizations.of(context).contactText2,
+                AppLocalizations.of(context)!.contactText2,
                 style: const TextStyle(
                     color: Colors.grey, fontFamily: 'Questrial', fontSize: 20),
               ),
@@ -79,7 +79,7 @@ class _ContactTabState extends State<ContactTab> {
                   children: [
                     _contactType('Telegram', FontAwesomeIcons.telegram,
                         () => helper.telegram()),
-                    _contactType('Twitter', FontAwesomeIcons.twitter,
+                    _contactType('X', FontAwesomeIcons.xTwitter,
                         () => helper.twitter()),
                     _contactType('E-mail', Icons.email, () => helper.mailTo()),
                   ],
@@ -98,7 +98,7 @@ class _ContactTabState extends State<ContactTab> {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Text(AppLocalizations.of(context).contactAlternativeText,
+          Text(AppLocalizations.of(context)!.contactAlternativeText,
               textAlign: TextAlign.start,
               style: const TextStyle(
                   color: Colors.white, fontFamily: 'Dangrek', fontSize: 32)),
@@ -113,9 +113,9 @@ class _ContactTabState extends State<ContactTab> {
                     Padding(
                       padding: const EdgeInsets.only(top: 100.0),
                       child: _textFieldCustom(
-                          AppLocalizations.of(context).askName,
-                          AppLocalizations.of(context).nameText +
-                              AppLocalizations.of(context).symbolText,
+                          AppLocalizations.of(context)!.askName,
+                          AppLocalizations.of(context)!.nameText +
+                              AppLocalizations.of(context)!.symbolText,
                           Icons.person,
                           false,
                           ((p0) => _nameForm = p0!)),
@@ -135,9 +135,9 @@ class _ContactTabState extends State<ContactTab> {
                   ],
                 ),
                 _textFieldCustom(
-                  AppLocalizations.of(context).askEmail,
-                  AppLocalizations.of(context).emailText +
-                      AppLocalizations.of(context).symbolText,
+                  AppLocalizations.of(context)!.askEmail,
+                  AppLocalizations.of(context)!.emailText +
+                      AppLocalizations.of(context)!.symbolText,
                   Icons.mail,
                   false,
                   ((p0) => _emailForm = p0!),
@@ -146,9 +146,9 @@ class _ContactTabState extends State<ContactTab> {
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     _textFieldCustom(
-                        AppLocalizations.of(context).messageText,
-                        AppLocalizations.of(context).messageText +
-                            AppLocalizations.of(context).symbolText,
+                        AppLocalizations.of(context)!.messageText,
+                        AppLocalizations.of(context)!.messageText +
+                            AppLocalizations.of(context)!.symbolText,
                         Icons.text_fields,
                         true,
                         ((p0) => _msgForm = p0!)),
@@ -216,11 +216,11 @@ class _ContactTabState extends State<ContactTab> {
               'message': _msgForm
             };
             try {
-              await EmailJS.send(
+              await emailjs.send(
                 dotenv.get('EMAILJS_SERVICE_KEY'),
                 dotenv.get('EMAILJS_TEMPLATE_KEY'),
                 templateParams,
-                Options(
+                emailjs.Options(
                   publicKey: dotenv.get('EMAILJS_PUBLIC_KEY'),
                   privateKey: dotenv.get('EMAILJS_PRIVATE_KEY'),
                 ),
@@ -232,7 +232,7 @@ class _ContactTabState extends State<ContactTab> {
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(
                   content: Text(
-                AppLocalizations.of(context).emailSended,
+                AppLocalizations.of(context)!.emailSended,
                 style: const TextStyle(color: Colors.white),
               )),
             );
@@ -240,7 +240,7 @@ class _ContactTabState extends State<ContactTab> {
         },
         child: Padding(
           padding: const EdgeInsets.all(10.0),
-          child: Text(AppLocalizations.of(context).contactAction),
+          child: Text(AppLocalizations.of(context)!.contactAction),
         ),
       ),
     );
@@ -298,7 +298,7 @@ class _ContactTabState extends State<ContactTab> {
         onSaved: _onSave,
         validator: (value) {
           if (value == null || value.isEmpty) {
-            return AppLocalizations.of(context).formEmptyField;
+            return AppLocalizations.of(context)!.formEmptyField;
           }
           return null;
         },

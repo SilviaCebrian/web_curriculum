@@ -4,6 +4,9 @@ import 'package:curriculum_web/pages/home_page.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+//Para los textos ir a lib > l10n > el file en y es y añadir lo que toque.
+// luego ejecutar flutter gen-l10n
 Future main() async {
   await dotenv.load(
     fileName: "dotenv",
