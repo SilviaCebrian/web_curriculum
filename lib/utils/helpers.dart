@@ -1,47 +1,46 @@
 import 'package:url_launcher/url_launcher.dart' as launcher;
 
-void launchURL(Uri _uri) async {
-  if (await launcher.canLaunchUrl(_uri)) {
-    await launcher.launchUrl(_uri);
+void launchURL(Uri uri) async {
+  if (await launcher.canLaunchUrl(uri)) {
+    await launcher.launchUrl(uri);
   } else {
-    throw 'Could not launch $_uri';
+    throw 'Could not launch $uri';
   }
 }
 
 //TODO: ver si funciona en release EL MAILTO
 void mailTo() {
-  Uri _uri = Uri(
+  final Uri uri = Uri(
       scheme: 'mailto',
       path: 'silviacebrianruiz@gmail.com',
       query: 'subject=Default Subject&body=Default body');
-  launchURL(_uri);
+  launchURL(uri);
 }
 
 void linkedin() {
-  Uri _uri = Uri(
-      scheme: 'https',
-      host: 'linkedin.com',
-      path: '/in/silvia-c-95a434169/');
-  launchURL(_uri);
+  final Uri uri = Uri(
+      scheme: 'https', host: 'linkedin.com', path: '/in/silvia-c-95a434169/');
+  launchURL(uri);
 }
 
 void github() {
-  Uri _uri = Uri(scheme: 'https', host: 'github.com', path: '/SilviaCebrian');
-  launchURL(_uri);
+  final Uri uri =
+      Uri(scheme: 'https', host: 'github.com', path: '/SilviaCebrian');
+  launchURL(uri);
 }
 
 void telegram() {
 //No se puede abrir chat directamente, lo caparon porque la peña metia scripts y tal.
-  Uri _uri = Uri(scheme: 'https', host: 't.me', path: 'DRaGuNia');
-  launchURL(_uri);
+  final Uri uri = Uri(scheme: 'https', host: 't.me', path: 'DRaGuNia');
+  launchURL(uri);
 }
 
 void twitter() {
   //https://x.com/messages/compose?recipient_id=1547645779
-  Uri _uri = Uri(
+  final Uri uri = Uri(
       scheme: 'https',
       host: 'x.com',
       path: '/messages/compose',
       queryParameters: {'recipient_id': '1547645779'});
-  launchURL(_uri);
+  launchURL(uri);
 }

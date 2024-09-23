@@ -47,3 +47,4 @@ app.*.map.json
 # Hide keys from version control
 secrets.dart
 *.env
+*.dotenv

@@ -77,7 +77,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
-          color: Theme.of(context).backgroundColor,
+          color: Theme.of(context).colorScheme.background,
         ),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -128,10 +128,10 @@ class SideLayout extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(15),
       color: Theme.of(context).primaryColor.withAlpha(50),
-      child: Column(
+      child: const Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
-        children: const <Widget>[
+        children: <Widget>[
           SizedBox(height: 50),
           ButtonLeftPanel(
               asyncFunc: helper.linkedin, url: 'assets/icons/linkedin.png'),
